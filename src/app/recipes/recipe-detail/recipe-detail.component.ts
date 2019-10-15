@@ -29,9 +29,11 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   addToSL(){
-    this.recipe.ingredients.forEach(ingredient => {
-      this.slService.addNewIngredient(ingredient);
-    })
+    // this.recipe.ingredients.forEach(ingredient => {
+    //   this.slService.addNewIngredient(ingredient);
+    // })
+
+    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 
   onEditRecipe(){
@@ -42,4 +44,7 @@ export class RecipeDetailComponent implements OnInit {
     this.recipeService.removeRecipe(this.id);
     this.router.navigate(['/recipes']);
   }
+
+
+
 }
