@@ -17,6 +17,8 @@ import { EmptyRecipeComponent } from './recipes/empty-recipe/empty-recipe.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './recipes/recipe-service.service';
 import { HttpClient } from 'selenium-webdriver/http';
+import { AuthComponent } from './auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { HttpClient } from 'selenium-webdriver/http';
     DropdownDirective,
     EmptyRecipeComponent,
     RecipeEditComponent,
+    AuthComponent,
+    LoadingSpinnerComponent,
     
   ],
   imports: [
