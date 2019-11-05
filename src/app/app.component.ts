@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 
 @Component({
@@ -6,11 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  selection: string;
+export class AppComponent implements OnInit{
 
-  selectedType(type: string){
-    this.selection= type;
-    console.log(type);
+  constructor(private authService: AuthService){}
+
+  ngOnInit(){
+    this.authService.autoLogin();
   }
 }
